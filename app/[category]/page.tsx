@@ -2,10 +2,7 @@ import { client } from "../lib/sanity"
 import Image from "next/image"
 import Link from "next/link"
 import Products from '../interfaces/types';
-import { ArrowRightSquareIcon } from "lucide-react";
-import NewestProducts from "../interfaces/types";
 
-export const revalidate = 0;
 
 async function getData(category: string) {
     const query = `*[_type == "product" && category->name == "${category}"] {
@@ -21,13 +18,18 @@ async function getData(category: string) {
     return data
 }
 
-// export async function generateStaticParams({ params }: { params: { category: string } }) {
-//     const data: Products[] = await getData(params.category)
-//     const paths = data.map((product) => ({
-//         params: { category: product.categoryName },
-//     }))
-//     return { paths, fallback: false }
-// }
+export async function generateStaticParams({
+    params
+}: {
+    params: { category: string }
+}) {
+
+    const data: Products[] = await getData(params.category)
+    const paths = data.map((product) => ({
+        params: { category: product.categoryName },
+    }))
+    return { paths, fallback: false }
+}
 
 
 export default async function CategoryPage(

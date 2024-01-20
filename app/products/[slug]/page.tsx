@@ -6,7 +6,6 @@ import CustomButtom from "@/app/component/CustomButtom";
 import AddToBag from "@/app/component/AddToBag";
 
 
-export const revaliate = 0;
 
 async function getData(slug: string) {
     const query = `*[_type == "product" && slug.current == "${slug}"][0] {

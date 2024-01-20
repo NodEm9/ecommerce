@@ -1,7 +1,6 @@
 import ProductsPage from '../component/Products';
 import { client } from '../lib/sanity';
 
-export const revalidate = 0;
 
 export async function generateStaticParams() {
     const query = `*[_type == "product"] {
