@@ -6,9 +6,6 @@ import { client } from './lib/sanity'
 
 
 
-
-export const revaliate = 0;
-
 export async function generateStaticParams() {
   const query = `*[_type == "product"] {
     slug
