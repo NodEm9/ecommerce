@@ -23,14 +23,6 @@ async function getData(slug: string) {
     return data;
 }
 
-export async function getServersideProps({ params }: { params: { slug: string } }) {
-    const data = await getData(params.slug);
-    return {
-        props: {
-            data,
-        },
-    };
-}
 export async function generateStaticParams() {
     const query = `*[_type == "product"] {
         slug
