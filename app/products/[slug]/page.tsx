@@ -8,7 +8,7 @@ import AddToBag from "@/app/component/AddToBag";
 
 export const revaliate = 0;
 
-export async function getData(slug: string) {
+async function getData(slug: string) {
     const query = `*[_type == "product" && slug.current == "${slug}"][0] {
         _id,
         name,   
