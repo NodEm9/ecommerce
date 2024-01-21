@@ -4,7 +4,7 @@ import ProductPage from './component/Products'
 import Sidebar from './component/Sidebar'
 import { client } from './lib/sanity'
 
-
+export const dynamic = 'force-dynamic'
 
 export async function generateStaticParams() {
   const query = `*[_type == "product"] {

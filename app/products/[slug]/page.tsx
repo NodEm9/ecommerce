@@ -22,6 +22,8 @@ async function getData(slug: string) {
     return data;
 }
 
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
     const query = `*[_type == "product"] {
         slug
