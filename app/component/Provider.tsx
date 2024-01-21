@@ -10,8 +10,8 @@ export default function CartProvider({ children }: { children: ReactNode }) {
             currency="USD"
             cartMode="client-only"
             stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string}
-            successUrl="http://localhost:3000/stripe/success"
-            cancelUrl="http://localhost:3000/stripe/error"
+            successUrl="https://ecommerce-rust-two.vercel.app/stripe/success"
+            cancelUrl="https://ecommerce-rust-two.vercel.app/stripe/error"
             billingAddressCollection={false}
             language="en-US"
             shouldPersist={true}
