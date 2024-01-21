@@ -21,12 +21,12 @@ async function getData(category: string) {
 export async function generateStaticParams({
     params
 }: {
-    params: { category: string }
+    params: { _id: string }
 }) {
 
-    const data: Products[] = await getData(params.category)
+    const data: Products[] = await getData(params._id)
     const paths = data.map((product) => ({
-        params: { category: product.categoryName },
+        params: { id: product._id },
     }))
     return { paths, fallback: false }
 }
