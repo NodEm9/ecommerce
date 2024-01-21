@@ -4,6 +4,7 @@ import Link from "next/link"
 import Products from '../interfaces/types';
 
 
+
 async function getData(category: string) {
     const query = `*[_type == "product" && category->name == "${category}"] {
         _id,
@@ -16,19 +17,6 @@ async function getData(category: string) {
 
     const data = await client.fetch(query)
     return data
-}
-
-export async function generateStaticParams({
-    params
-}: {
-    params: { _id: string }
-}) {
-
-    const data: Products[] = await getData(params._id)
-    const paths = data.map((product) => ({
-        params: { id: product._id },
-    }))
-    return { paths, fallback: false }
 }
 
 
