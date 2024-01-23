@@ -26,7 +26,7 @@ export default async function Home() {
   return (
     <section className='w-full h-full '>
       <div className='mx-auto w-full item-center justify-center flex flex-col m-auto'>
-        <div className='max-w-2xl pb-8 px-16 lg:pb-8 lg:gap-16 flex lg:max-w-full md:max-w-full md:px-0 md:gap-x-3 justify-between'>
+        <div className='max-w-2xl pb-8 px-10 lg:pb-8 lg:gap-16 flex lg:max-w-full md:max-w-full md:px-0 md:gap-x-3 justify-between'>
           <Sidebar />
           <HeroImage />
         </div>
@@ -34,7 +34,7 @@ export default async function Home() {
           <section className='mt-28 '>
             <NewestProduct />
           </section>
-          <section>
+          <section className='px-10 md:px-0'>
             <ProductPage />
           </section>
         </section>

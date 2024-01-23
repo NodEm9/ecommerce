@@ -80,11 +80,11 @@ export default async function productDetails({
                         10% off
                     </div>
 
-                    <p className="text-xl lg:max-w-lg lg:mx-0 flex max-w-2xl mx-auto justify-between text-slate-800 font-semibold mt-12 mb-1">
+                    <p className="text-xl lg:max-w-auto lg:mx-0 flex max-w-2xl mx-auto justify-between text-slate-800 font-semibold mt-12 mb-1">
                         Select Size:
-                        <span className="lg:mr-16 md:mr-[8.5rem] mr-[1.89rem] ">Size Guide</span>
+                        <span className="l ">Size Guide</span>
                     </p>
-                    <div className="flex flex-wrap lg:w-max-w-4xl max-w-2xl gap-2 h-auto rounded-xl px- m-auto">
+                    <div className="flex flex-wrap lg:w-max-w-4xl max-w-2xl gap-2 justify-between h-auto rounded-xl mx-auto m-auto">
                         {sizes.map((size) => (
                             <div
                                 key={size.id}

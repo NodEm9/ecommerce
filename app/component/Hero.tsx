@@ -14,7 +14,7 @@ export default async function HeroImage() {
     return (
         <section className='bg-white lg:items-center lg:justify-center lg:m-auto h-full lg:mt-12 justify-center items-center md:max-w-full max-w-2xl sm:pb-8 lg:max-w-full'>
             <div className="w-full flex-wrap grid grid-cols-one-column md:grid-cols-two-column md:max-w-full md:items-center md:justify-center md:ml-8 md:gap-6 lg:max-w-full lg:grid-cols-two-column lg:gap-48 lg:h-full  lg:justify-between justify-between">
-                <div className='w-full top-0 mt-4 mb-16 md:mt-16 flex lg:-mt-12'>
+                <div className='w-full top-0 mt-4 mb-16 md:mt-16 flex lg:-mt-44'>
                     <div className="">
                         <h1 className='text-3xl lg:w-full lg:text-6xl font-bold py-2 md:text-4xl md:text-slate-700 leading-relaxed'>
                             Our Best Winter Collections, <br /> Up to <span className="text-rose-300">50% Off</span>
