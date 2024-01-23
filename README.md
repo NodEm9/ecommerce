@@ -12,3 +12,4 @@
 - Tailwindcss,
 - ShadcnUI and
 - Stripe
+- Node.js
