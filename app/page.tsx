@@ -34,7 +34,7 @@ export default async function Home() {
           <section className='mt-28 '>
             <NewestProduct />
           </section>
-          <section className='px-10 md:px-0'>
+          <section className='px-8 md:px-0'>
             <ProductPage />
           </section>
         </section>
