@@ -34,10 +34,10 @@ export default async function CategoryPage(
             <div className="max-w-2xl lg:max-w-7xl md:max-w-7xl mt-16  pb-6 justify-center lg:m-auto lg:items-center">
                 <h1 className="text-3xl lg:text-4xl md:text-4xl text-slate-700 font-bold mt-16 pb-8">All {params.category}</h1>
                 <div className='flex py-6 md:max-w-7xl lg:w-full max-w-2xl'>
-                    <div className='w-full grid md:grid-cols-four-column grid-cols-one-column lg:items-center lg:justify-center lg:m-auto lg:w-full lg:gap-16'>
+                    <div className='grid lg:grid-cols-four-column grid-cols-one-column lg:items-center lg:justify-center lg:m-auto lg:gap-16 md:grid-cols-three-column md:gap-x-6 mx-auto'>
                         {data.map((product) => (
                             <div key={product._id} className='group relative py-8 pb-3 '>
-                                <Link href={`/products/${product.slug}`} className='w-full h-full aspect-square grid grid-cols-one-columnlg:grid-cols-four-colum group-hover:hover:opacity-75 lg:w-full lg:h-full'>
+                                <Link href={`/products/${product.slug}`} className='grid grid-cols-one-column lg:grid-cols-four-colum mm group-hover:hover:opacity-75 lg:w-full lg:h-full'>
                                     <Image
                                         src={product.imageUrl}
                                         alt="Hero Image"
@@ -45,7 +45,7 @@ export default async function CategoryPage(
                                         height={500}
                                         priority={true}
                                         quality={100}
-                                        className="object-cover object-center w-full h-full lg:w-full lg:h-full md:w-full md:h-full bg-cover rounded-lg shadow-md"
+                                        className="object-cover object-center bg-cover rounded-lg shadow-md"
                                     />
                                     <div className='flex py-14 pb-12 lg:py-6 lg:pb-3 justify-between md:justify-between md:px-4'>
                                         <Link href={`/products/${product.slug}`}>
